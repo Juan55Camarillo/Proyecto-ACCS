@@ -1,0 +1,122 @@
+const mongoose = require('mongoose');
+
+const {Schema} = mongoose;
+
+const HorarioSchema = new Schema({
+    /*Lunes variables*/
+    diaLun1:{type:String, default:''},
+    diaLun2:{type:String, default:''},
+    diaLun3:{type:String, default:''},
+    diaLun4:{type:String, default:''},
+    diaLun5:{type:String, default:''},
+    diaLun6:{type:String, default:''},
+    diaLun7:{type:String, default:''},
+    diaLun8:{type:String, default:''},
+    diaLun9:{type:String, default:''},
+    diaLun10:{type:String, default:''},
+    diaLun11:{type:String, default:''},
+    diaLun12:{type:String, default:''},
+    diaLun13:{type:String, default:''},
+    diaLun14:{type:String, default:''},
+
+    /*Martes variables*/
+    diaMar1:{type:String, default:''},
+    diaMar2:{type:String, default:''},
+    diaMar3:{type:String, default:''},
+    diaMar4:{type:String, default:''},
+    diaMar5:{type:String, default:''},
+    diaMar6:{type:String, default:''},
+    diaMar7:{type:String, default:''},
+    diaMar8:{type:String, default:''},
+    diaMar9:{type:String, default:''},
+    diaMar10:{type:String, default:''},
+    diaMar11:{type:String, default:''},
+    diaMar12:{type:String, default:''},
+    diaMar13:{type:String, default:''},
+    diaMar14:{type:String, default:''},
+
+    /*Miércoles variables*/
+    diaMie1:{type:String, default:''},
+    diaMie2:{type:String, default:''},
+    diaMie3:{type:String, default:''},
+    diaMie4:{type:String, default:''},
+    diaMie5:{type:String, default:''},
+    diaMie6:{type:String, default:''},
+    diaMie7:{type:String, default:''},
+    diaMie8:{type:String, default:''},
+    diaMie9:{type:String, default:''},
+    diaMie10:{type:String, default:''},
+    diaMie11:{type:String, default:''},
+    diaMie12:{type:String, default:''},
+    diaMie13:{type:String, default:''},
+    diaMie14:{type:String, default:''},
+
+    /*Jueves variables*/
+    diaJue1:{type:String, default:''},
+    diaJue2:{type:String, default:''},
+    diaJue3:{type:String, default:''},
+    diaJue4:{type:String, default:''},
+    diaJue5:{type:String, default:''},
+    diaJue6:{type:String, default:''},
+    diaJue7:{type:String, default:''},
+    diaJue8:{type:String, default:''},
+    diaJue9:{type:String, default:''},
+    diaJue10:{type:String, default:''},
+    diaJue11:{type:String, default:''},
+    diaJue12:{type:String, default:''},
+    diaJue13:{type:String, default:''},
+    diaJue14:{type:String, default:''},
+
+    /*Viernes variables*/
+    diaVie1:{type:String, default:''},
+    diaVie2:{type:String, default:''},
+    diaVie3:{type:String, default:''},
+    diaVie4:{type:String, default:''},
+    diaVie5:{type:String, default:''},
+    diaVie6:{type:String, default:''},
+    diaVie7:{type:String, default:''},
+    diaVie8:{type:String, default:''},
+    diaVie9:{type:String, default:''},
+    diaVie10:{type:String, default:''},
+    diaVie11:{type:String, default:''},
+    diaVie12:{type:String, default:''},
+    diaVie13:{type:String, default:''},
+    diaVie14:{type:String, default:''},
+
+    /*Sábado variables*/
+     diaSab1:{type:String, default:''},
+    diaSab2:{type:String, default:''},
+    diaSab3:{type:String, default:''},
+    diaSab4:{type:String, default:''},
+    diaSab5:{type:String, default:''},
+    diaSab6:{type:String, default:''},
+    diaSab7:{type:String, default:''},
+    diaSab8:{type:String, default:''},
+    diaSab9:{type:String, default:''},
+    diaSab10:{type:String, default:''},
+    diaSab11:{type:String, default:''},
+    diaSab12:{type:String, default:''},
+    diaSab13:{type:String, default:''},
+    diaSab14:{type:String, default:''},
+    
+    /*Domingo variables*/
+    diaDom1:{type:String, default:''},
+    diaDom2:{type:String, default:''},
+    diaDom3:{type:String, default:''},
+    diaDom4:{type:String, default:''},
+    diaDom5:{type:String, default:''},
+    diaDom6:{type:String, default:''},
+    diaDom7:{type:String, default:''},
+    diaDom8:{type:String, default:''},
+    diaDom9:{type:String, default:''},
+    diaDom10:{type:String, default:''},
+    diaDom11:{type:String, default:''},
+    diaDom12:{type:String, default:''},
+    diaDom13:{type:String, default:''},
+    diaDom14:{type:String, default:''},
+
+    author: { type: String, required: true},
+    
+    date: { type: Date, default: Date.now}
+})
+module.exports = mongoose.model('Horario', HorarioSchema);

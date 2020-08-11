@@ -1,0 +1,37 @@
+<!-- Chat general-->
+<div class="col-md4-4 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            CHAT GENERAL
+        </div>
+        <div class="card-body">
+            {{#each chats}}
+            <h5>{{author}}</h5>
+            <p>{{message}}</p>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+<!-- Chat para la persona-->
+<div class="col-md4-4 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            CHAT
+        </div>
+        <div class="card-body">
+            <form action="/chat/chat_user" method="POST">
+                <div class="form-group">
+                    Estas chateando como: {{user.name}}
+                    <input type="hidden" name="author" value="{{user.email}}">
+                </div>
+                <div class="form-group">
+                    <textarea name="message" class="form-control" autofocus></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

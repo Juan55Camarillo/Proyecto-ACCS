@@ -1,0 +1,241 @@
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card mt-8 text-center">
+
+            <form action="/horario/nuevo-horario" method="POST">
+                <div class="card-header">
+                    <input type="hidden" name="auhtor" value={{user.name}}>
+                    <h1 class="h3">
+                        Nuevo Horario por {{user.name}}
+                    </h1>
+                </div>
+                <div class="table-responsive">
+                    <!--Section Lunes -->
+                    <table class="table">
+                        <thead>
+                            <!--<input type="checkBox" name="diaLun" id="diaLun">-->
+                            <div class="text-center">
+                                <h2 id="diaLun">Lunes</h2>
+                            </div>
+
+                        </thead>
+                        <tbody>
+                            <tr id="DLun"></tr>
+                            <tr id="DLun2"></tr>
+
+                        </tbody>
+                    </table>
+                    <!--Section Martes -->
+
+                    <table class="table">
+                        <thead>
+                            <div class="text-center">
+                                <h2 class="text-center" id="diaMar">Martes</h2>
+                            </div>
+                        </thead>
+                        <tbody>
+                            <tr id="DMar"></tr>
+                            <tr id="DMar2"></tr>
+
+                        </tbody>
+                    </table>
+
+                    <!--Section Miércoles -->
+                    <table class="table">
+                        <thead>
+                            <div class="text-center">
+                                <h2 class="text-center" id="diaMie">Miércoles</h2>
+                            </div>
+                        </thead>
+                        <tbody>
+                            <tr id="DMie"></tr>
+                            <tr id="DMie2"></tr>
+
+                        </tbody>
+                    </table>
+
+                    <!--Section Jueves -->
+                    <table class="table">
+                        <thead>
+                            <div class="text-center">
+                                <h2 class="text-center" id="diaJue">Jueves</h2>
+                            </div>
+                        </thead>
+                        <tbody>
+                            <tr id="DJue"></tr>
+                            <tr id="DJue2"></tr>
+
+                        </tbody>
+                    </table>
+
+                    <!--Section Viernes -->
+                    <table class="table">
+                        <thead>
+                            <div class="text-center">
+                                <h2 class="text-center" id="diaVie">Viernes</h2>
+                            </div>
+                        </thead>
+                        <tbody>
+                            <tr id="DVie"></tr>
+                            <tr id="DVie2"></tr>
+
+                        </tbody>
+                    </table>
+
+                    <!--Section Sábado -->
+                    <table class="table">
+                        <thead>
+                            <div class="text-center">
+                                <h2 class="text-center" id="diaSab">Sábado</h2>
+                            </div>
+                        </thead>
+                        <tbody>
+                            <tr id="DSab"></tr>
+                            <tr id="DSab2"></tr>
+                            
+
+                        </tbody>
+                    </table>
+
+                    <!--Section Domingo -->
+                    <table class="table">
+                        <thead>
+                            <div class="text-center">
+                                <h2 class="text-center" id="diaDom">Domingo</h2>
+                            </div>
+                        </thead>
+                        <tbody>
+                            <tr id="DDom"></tr>
+                            <tr id="DDom2"></tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" type="submit">
+                            Listo
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    /*var DLun = document.getElementById('DLun');
+
+    DLun.addEventListener('click', function(){
+         $('input[type="checkbox"]').on('change', function (e) {
+        if (this.checked) {
+            console.log('Checkbox ' + $(e.currentTarget).val() + ' checked');
+        } else {
+            console.log('Checkbox ' + $(e.currentTarget).val() + ' unchecked');
+        }
+    });
+    })
+   */
+
+    
+    var i = 1;
+    while (i != 9) {
+
+        console.log(i)
+
+        /*Section Lunes*/
+        DLun.innerHTML +=
+            `<td> 
+        <input type="checkBox" name="diaLun`+ i + `" id="diaLun` + i + `" value="` + (i + 6) + `-` + (i + 7) + `">
+                <label for="diaLun" value="">`+ (i + 6) + `:00-` + (i + 7) + `:00</label>{{diaLun1}}
+        </td>`
+        /*Section Martes*/
+        DMar.innerHTML +=
+            `<td> 
+        <input type="checkBox" name="diaMar`+ i + `" id="diaMar` + i + `" value="` + (i + 6) + `-` + (i + 7) + `">
+                <label for="diaMar">`+ (i + 6) + `:00-` + (i + 7) + `:00</label>
+        </td>`
+        /*Section Miércoles*/
+        DMie.innerHTML +=
+            `<td> 
+        <input type="checkBox" name="diaMie`+ i + `" id="diaMie` + i + `" value="` + (i + 6) + `-` + (i + 7) + `">
+                <label for="diaMie">`+ (i + 6) + `:00-` + (i + 7) + `:00</label>
+        </td>`
+        /*Section Jueves*/
+        DJue.innerHTML +=
+            `<td> 
+        <input type="checkBox" name="diaJue`+ i + `" id="diaJue` + i + `" value="` + (i + 6) + `-` + (i + 7) + `">
+                <label for="diaJue">`+ (i + 6) + `:00-` + (i + 7) + `:00</label>
+        </td>`
+        /*Section Viernes*/
+        DVie.innerHTML +=
+            `<td> 
+        <input type="checkBox" name="diaVie`+ i + `" id="diaVie` + i + `" value="` + (i + 6) + `-` + (i + 7) + `">
+                <label for="diaVie">`+ (i + 6) + `:00-` + (i + 7) + `:00</label>
+        </td>`
+        /*Section Sábado*/
+        DSab.innerHTML +=
+            `<td> 
+        <input type="checkBox" name="diSab`+ i + `" id="diSab` + i + `" value="` + (i + 6) + `-` + (i + 7) + `">
+                <label for="diSab">`+ (i + 6) + `:00-` + (i + 7) + `:00</label>
+        </td>`
+        /*Section Domingo*/
+        DDom.innerHTML +=
+            `<td> 
+        <input type="checkBox" name="diaDom`+ i + `" id="diaDom` + i + `" value="` + (i + 6) + `-` + (i + 7) + `">
+                <label for="diaDom">`+ (i + 6) + `:00-` + (i + 7) + `:00</label>
+        </td>`
+
+        i += 1;
+    }
+
+    var i = 7;
+    while (i != 15) {
+        console.log(i)
+
+        /*Section Lunes*/
+        DLun2.innerHTML +=
+            `<td> 
+        <input type="checkBox" name="diaLun`+ i + `" id="diaLun` + i + `" value="` + (i + 6) + `-` + (i + 7) + `">
+                <label for="diaDom-1">`+ (i + 6) + `:00-` + (i + 7) + `:00</label>
+        </td>`
+        /*Section Martes*/
+        DMar2.innerHTML +=
+            `<td> 
+        <input type="checkBox" name="diaMar`+ i + `" id="diaMar` + i + `" value="` + (i + 6) + `-` + (i + 7) + `">
+                <label for="diaMar">`+ (i + 6) + `:00-` + (i + 7) + `:00</label>
+        </td>`
+        /*Section Miércoles*/
+        DMie2.innerHTML +=
+            `<td> 
+        <input type="checkBox" name="diaMie`+ i + `" id="diaMie` + i + `" value="` + (i + 6) + `-` + (i + 7) + `">
+                <label for="diaMie">`+ (i + 6) + `:00-` + (i + 7) + `:00</label>
+        </td>`
+        /*Section Jueves*/
+        DJue2.innerHTML +=
+            `<td> 
+        <input type="checkBox" name="diaJue`+ i + `" id="diaJue` + i + `" value="` + (i + 6) + `-` + (i + 7) + `">
+                <label for="diaJue">`+ (i + 6) + `:00-` + (i + 7) + `:00</label>
+        </td>`
+        /*Section Viernes*/
+        DVie2.innerHTML +=
+            `<td> 
+        <input type="checkBox" name="diaVie`+ i + `" id="diaVie` + i + `" value="` + (i + 6) + `-` + (i + 7) + `">
+                <label for="diaVie">`+ (i + 6) + `:00-` + (i + 7) + `:00</label>
+        </td>`
+        /*Section Sábado*/
+        DSab2.innerHTML +=
+            `<td> 
+        <input type="checkBox" name="diSab`+ i + `" id="diSab` + i + `" value="` + (i + 6) + `-` + (i + 7) + `">
+                <label for="diSab">`+ (i + 6) + `:00-` + (i + 7) + `:00</label>
+        </td>`
+        /*Section Domingo*/
+        DDom2.innerHTML +=
+            `<td> 
+        <input type="checkBox" name="diaDom`+ i + `" id="diaDom` + i + `" value="` + (i + 6) + `-` + (i + 7) + `">
+                <label for="diaDom">`+ (i + 6) + `:00-` + (i + 7) + `:00</label>
+        </td>`
+
+        i += 1;
+    }
+
+</script>
